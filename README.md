@@ -15,7 +15,7 @@ Gain further knowledge of:
 ## To-do
 
 - [x] Create React app - Done!
-- [ ] Work Git Flow
+- [x] Work Git Flow
 - [ ] Write Terraform code needed to create S3 bucket for frontend.
 - [ ]
 - [ ]
