@@ -16,12 +16,12 @@ Gain further knowledge of:
 
 - [x] Create React app - Done!
 - [x] Work Git Flow
-- [ ] Write Terraform code needed to create S3 bucket for frontend.
+- [x] Write Terraform code needed to create S3 bucket for frontend.
+- [ ] React build sync to to todit.frontend
+- [ ] 
 - [ ]
 - [ ]
-- [ ]
-- [ ]
-- [ ]
+- [ ] Clean and script build workflow
 
 ## Stack
 
