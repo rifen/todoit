@@ -21,7 +21,7 @@ Gain further knowledge of:
 - [ ] Building todo functionality in React
 - [ ] Lambda's that receive Json
 - [ ] Terraform some sort of database??
-- [ ]
+- [ ] .tk domain ? CDN/Route53
 - [ ] Clean and script build workflow
 
 ## Stack
