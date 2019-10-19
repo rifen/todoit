@@ -3,9 +3,10 @@ import "./App.css";
 import ToDo from "./ToDo.js";
 
 function App() {
-  // Logic to keep track of ToDo's
+  // Logic to track state of ToDo's
   const [todoList, setToDoList] = useState([]);
   console.log(todoList);
+
   const addToDo = () =>
     setToDoList(currentToDoList => [...currentToDoList, ""]);
   return (

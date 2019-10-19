@@ -11,13 +11,13 @@ import React from "react";
 export default function ToDo(props) {
   return (
     <div className="ToDo">
+      <input type="checkbox" name="check.done" onClick={props.onChecked} />
       <input
         type="text"
         name="todo.input"
         value={props.text}
         onChange={props.onTextChange}
       />
-      <input type="checkbox" name="check.done" />
     </div>
   );
 }
