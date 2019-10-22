@@ -5,27 +5,48 @@ import ToDo from "./ToDo.js";
 function App() {
   // Logic to track state of ToDo's
   const [todoList, setToDoList] = useState([]);
-  console.log(todoList);
 
-  const addToDo = () =>
-    setToDoList(currentToDoList => [...currentToDoList, ""]);
+  const deleteToDo = todoToDelete => {
+    console.log("trying to delete: ", todoToDelete);
+    setToDoList(currentToDoList =>
+      currentToDoList.filter((todo, index) => {
+        return todoToDelete !== todo.id;
+      })
+    );
+  };
+
+  const addToDo = () => {
+    const newTodo = { text: "", id: new Date().toString() };
+
+    console.log("new todo is: ", newTodo);
+
+    setToDoList(currentToDoList => [...currentToDoList, newTodo]);
+  };
+
+  const onTextChange = (event, index) => {
+    const text = event.target.value;
+
+    setToDoList(currentToDoList => {
+      const newToDoList = [...currentToDoList];
+      newToDoList[index].text = text;
+      return newToDoList;
+    });
+  };
+
+  // [Walk the Dog, Do the Dishes]
+
   return (
     //Displays the ToDo's and generates them
     <div className="App">
       <button onClick={addToDo}>Create ToDo</button>
       {todoList.map((todo, index) => (
-        <ToDo
-          text={todo}
+        <ToDo //Start Component
+          todoId={todo.id}
+          text={todo.text}
           key={index}
-          onTextChange={event => {
-            const text = event.target.value;
-            setToDoList(currentToDoList => {
-              const newToDoList = [...currentToDoList];
-              newToDoList[index] = text;
-              return newToDoList;
-            });
-          }}
-        />
+          onTextChange={event => onTextChange(event, index)}
+          onDelete={deleteToDo}
+        /> //End Component
       ))}
     </div>
   );

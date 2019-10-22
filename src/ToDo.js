@@ -9,6 +9,8 @@ import React from "react";
 //     }
 
 export default function ToDo(props) {
+  console.log("our props are: ", props);
+
   return (
     <div className="ToDo">
       <input type="checkbox" name="check.done" onClick={props.onChecked} />
@@ -18,6 +20,13 @@ export default function ToDo(props) {
         value={props.text}
         onChange={props.onTextChange}
       />
+      <button
+        type="button"
+        name="button.delete"
+        onClick={() => props.onDelete(props.todoId)}
+      >
+        &#x2718;
+      </button>
     </div>
   );
 }

@@ -17,7 +17,7 @@ Gain further knowledge of:
 - [x] Create React app - Done!
 - [x] Work Git Flow
 - [x] Write Terraform code needed to create S3 bucket for frontend.
-- [ ] React build sync to todoit.frontend and test public bucket
+- [x] React build sync to todoit.frontend and test public bucket
 - [ ] Building todo functionality in React
 - [ ] Lambda's that receive Json
 - [ ] Terraform some sort of database??
