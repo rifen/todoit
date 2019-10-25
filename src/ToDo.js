@@ -10,10 +10,17 @@ import React from "react";
 
 export default function ToDo(props) {
   console.log("our props are: ", props);
+  if (props.checked === true) {
+  }
 
   return (
     <div className="ToDo">
-      <input type="checkbox" name="check.done" onClick={props.onChecked} />
+      <input
+        type="checkbox"
+        name="check.done"
+        onChange={() => props.onChecked(props.todoId)}
+        checked={props.checked}
+      />
       <input
         type="text"
         name="todo.input"
